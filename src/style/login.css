@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;800;900&display=swap');
+
+*,
+html,
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  outline: none;
+}
+
+:root{
+  --bg-primary: #2C1F4A;
+  --bg-secondary: #361d73;
+  --bg-btn:#826CA6;
+  --bg-glow:#6106A4;
+  --font-reg: 'Poppins', sans-serif;
+  --font-opsi: 'Playfair Display', serif;
+}
+
+.container-login{
+  padding: 2rem 7% 0 7%;
+  display: flex;
+  height: 100vh;
+  background-color: #826CA6;
+  gap: 2rem;
+}
+
+.container-login .logo-login{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.logo-login img{
+  width: 2rem;
+}
+
+.logo-login h1{
+  font-family: var(--font-reg);
+  font-size: 1.5rem;
+  color: #361d73;
+}
+
+.form{
+  padding: 2rem 3rem 0 1rem;
+  width: 35rem;
+}
+
+.form .login-title{
+  margin-bottom: 2rem;
+  font-family: var(--font-reg);
+}
+
+.login-title h1{
+  color: var(--bg-secondary);
+  font-size:2rem;
+}
+
+.login-title p{
+  max-width: 17rem;
+  font-size: .9rem;
+  margin: 1rem 0;
+  color: #2C1F4A;
+}
+
+.login-title p a{
+  color: white;
+}
+
+.input-login{
+  font-family: var(--font-reg);
+  position: relative;
+}
+
+.input-login .email-login p, .password-login p{
+  font-size: .8rem;
+}
+
+.email-login, .password-login{
+  border-bottom: 2px solid var(--bg-primary);
+  margin-bottom: 1rem;
+}
+
+.form-email, .form-password{
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin: .6rem 0;
+}
+
+.form-email i{
+  color: #2C1F4A;
+}
+
+.form-email input, .form-password input{
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-email input::placeholder, .form-password input::placeholder{
+  color: #2C1F4A;
+}
+
+.password-login{
+  margin-top: 1rem;
+}
+
+.form-password .mata{
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: var(--bg-primary);
+}
+
+
+.input-login .remember{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remember .checkbox{
+  display: flex;
+  gap: .4rem;
+  align-items: center;
+}
+
+.checkbox p{
+  font-size: .8rem;
+}
+.remember a{
+  font-size: .8rem;
+  color: #2C1F4A;
+}
+
+.remember a:hover{
+  color: var(--bg-glow);
+}
+
+.btn-login {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-reg);
+  display: flex;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+.btn-login:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-login p {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+
+.sosmed-link p{
+  font-family: var(--font-reg);
+  font-size: .8rem;
+  color: #fff;
+  text-align: center;
+}
+
+.sosmed-link .img-sosmed-login{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.fb-login, .google, .twit{
+  width: 2rem;
+  cursor: pointer;
+}
+
+.fb-login img, .google img, .twit img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container-login .img-icon-login{
+  background-color: var(--bg-primary);
+  width: 35rem;
+  height: 90vh;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.img-icon-login .img-kanan{
+  display: flex;
+  justify-content: center;
+}
+
+.img-icon-login img{
+  width: 20rem;
+  animation: floating 5s infinite;
+}
+
+.img-icon-login .typo-kanan{
+  font-family: var(--font-reg);
+  margin-top: 4rem;
+}
+
+.typo-kanan h1{
+  color: var(--bg-btn);
+}
+
+.typo-kanan p{
+  color: #fff;
+}
+
+@keyframes floating {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-1rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@media (max-width:450px) {
+  .form{
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    /* background-color: #2C1F4A; */
+  }
+
+  .form .login-title h1{
+    text-align: center;
+  }
+
+  .email-login .form-email{
+    width: 100%;
+  }
+
+
+
+
+  .img-icon-login{
+    display: none;
+  }
+
+
+}
